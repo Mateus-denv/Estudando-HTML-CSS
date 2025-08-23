@@ -1,0 +1,34 @@
+@import url("/assets/css/base/style.css");
+
+
+.content{
+    font-family: "Jost", sans-serif;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    z-index: 1;
+    margin-left: 175px;
+
+}
+
+
+h1{
+    font-size: 90px;
+    text-align: left;
+}
+
+.title{
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    display: block;
+}
+
+.vantagens {
+    display: inline-block;
+    margin-top: 2%;
+    font-size: 20px;
+}
+
+ol {
+    padding-left: auto;
+}
