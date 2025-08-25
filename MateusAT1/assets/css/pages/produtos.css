@@ -46,7 +46,6 @@
     font-family: "Italiana", sans-serif; /* Usando a fonte do projeto */
 }
 
-/* --- MEDIA QUERY PARA RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .produtos-grid {
         padding: 10px;
