@@ -38,7 +38,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* Altura automática para se adaptar ao conteúdo */
+    height: auto; 
     padding: 15px 5%; /* Espaçamento interno responsivo */
     
     display: flex;
@@ -48,13 +48,13 @@ body {
     font-family: "Jost", sans-serif;
     background-color: rgba(0, 0, 0, 0.253);
     border-bottom: 2px solid #020202;
-    z-index: 10; /* Z-index alto para ficar sempre na frente */
+    z-index: 10; 
 }
 
 .inicio h2 {
-    font-size: 40px; /* Tamanho ajustado para melhor visualização */
+    font-size: 40px; 
     font-weight: 500;
-    color: #fff; /* Adicionado cor para garantir legibilidade */
+    color: #fff; 
 }
 
 .box {
@@ -75,8 +75,6 @@ body {
     color: #ccc;
 }
 
-/* --- MEDIA QUERY PARA RESPONSIVIDADE --- */
-/* Para telas com largura máxima de 768px (tablets e celulares) */
 @media (max-width: 768px) {
     .head {
         flex-direction: column; /* Empilha o logo e os links */
