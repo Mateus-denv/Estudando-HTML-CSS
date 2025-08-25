@@ -1,2 +1,60 @@
-@import url("/assets/css/base/style.css");
+@import url("/MateusAT1/assets/css/base/style.css");
 
+/* Novo container para os cards */
+.produtos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os cards no topo */
+    flex-wrap: wrap; /* ESSENCIAL: Permite que os cards quebrem a linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+}
+
+.produtos-card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Jost", sans-serif; /* Usando a fonte do projeto */
+}
+
+.produtos-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produtos-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.produto-name {
+    padding: 20px;
+    text-align: center;
+}
+
+.produto-name h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: "Italiana", sans-serif; /* Usando a fonte do projeto */
+}
+
+/* --- MEDIA QUERY PARA RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .produtos-grid {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos-card {
+        width: 90%; /* Faz o card ocupar quase toda a tela do celular */
+    }
+}
