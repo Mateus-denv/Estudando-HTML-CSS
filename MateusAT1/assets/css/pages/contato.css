@@ -101,7 +101,6 @@ address {
     color: #555;
 }
 
-/* --- MEDIA QUERY PARA RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .contato-container {
         padding: 25px; /* Reduz o padding interno */
