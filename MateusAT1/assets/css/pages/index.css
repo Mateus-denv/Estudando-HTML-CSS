@@ -36,7 +36,6 @@ ol {
     padding: 0;
 }
 
-/* --- MEDIA QUERY PARA RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .content h1 {
         font-size: 3.5rem; /* Reduz drasticamente o H1 em telas menores */
