@@ -1,23 +1,23 @@
-@import url("/assets/css/base/style.css");
+@import url("/MateusAT1/assets/css/base/style.css");
 
-
-.content{
+.content {
     font-family: "Jost", sans-serif;
-    width: 100%;
-    position: absolute;
-    align-items: center;
+    width: 90%; /* Usa porcentagem para ser flexível */
+    max-width: 1200px; /* Limita a largura máxima em telas grandes */
+    position: relative;
     z-index: 1;
-    margin-left: 175px;
-
+    text-align: center; /* Centraliza o texto do container */
+    color: #1b1b1b; /* Cor do texto para melhor contraste com o fundo */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra para legibilidade */
 }
 
-
-h1{
-    font-size: 90px;
-    text-align: left;
+.content h1 {
+    font-size: 5rem; /* Tamanho de fonte grande, mas usando unidade relativa */
+    text-align: center;
+    line-height: 1.1;
 }
 
-.title{
+.title {
     font-family: "Italiana", sans-serif;
     font-weight: 400;
     display: block;
@@ -30,5 +30,25 @@ h1{
 }
 
 ol {
-    padding-left: auto;
+    list-style-position: inside; /* Coloca os marcadores da lista para dentro */
+    text-align: left; /* Alinha o texto da lista à esquerda */
+    display: inline-block; /* Permite centralizar o bloco da lista */
+    padding: 0;
+}
+
+/* --- MEDIA QUERY PARA RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 3.5rem; /* Reduz drasticamente o H1 em telas menores */
+    }
+
+    .vantagens {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2.5rem; /* Reduz ainda mais para celulares */
+    }
 }
