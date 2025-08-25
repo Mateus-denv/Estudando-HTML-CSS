@@ -3,78 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/pages/produtos.css">
+    <link rel="stylesheet" href="/MateusAT1/assets/css/pages/produtos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Nossos Produtos</title>
 </head>
-<body>
-    <div class="banner">
-        <div class="head">
-            <div class="inicio">
-                <h2>ITALIANIN</h2>
+    <body>
+        <div class="banner">
+            <div class="head">
+                <div class="inicio">
+                    <h2>ITALIANIN</h2>
+                </div>
+                <div class="box">
+                    <div><a href="/MateusAT1/index.html">Inicio</a></div>
+                    <div><a href="/MateusAT1/pages/contato.html">Contato</a></div>
+                </div>
+                
             </div>
-            <div class="box">
-                <div><a href="/index.html">Inicio</a></div>
-                <div><a href="/pages/contato.html">Contato</a></div>
+            <div class="produtos-grid">
+                <div class="produtos-card">
+                    <img src="https://images.pexels.com/photos/30910494/pexels-photo-30910494.jpeg" alt="Foto" class="produtos-photo">
+                    <div class="produto-name">
+                        <h3>Macarrão ao molho branco</h3>
+                    </div>
+                </div>
+                <div class="produtos-card">
+                    <img src="https://images.pexels.com/photos/30910494/pexels-photo-30910494.jpeg" alt="Foto" class="produtos-photo">
+                    <div class="produto-name">
+                        <h3>Macarrão ao molho rose</h3>
+                    </div>
+                </div>
             </div>
-            
         </div>
-    <div class="produtos-card">
-        <div class="produtos-borda">
-            <img src="https://images.pexels.com/photos/30910494/pexels-photo-30910494.jpeg" alt="Foto" class="produtos-photo">
-            <div class="produto-name">
-                <h3></h3>
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
-
-.produtos-card {
-    text-align: center;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.produtos-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.produtos-border {
-    padding: 2px; /* espessura da borda */
-    border-radius: 15%; /* mesmo arredondamento da foto */
-    background: linear-gradient(
-        to right,
-        #ff0000 0% 33.33%,
-        #ffffff 33.33% 66.66%,
-        #0036fb 66.66% 100%
-    ); /* gradiente da borda */
-    display: inline-block;
-}
-
-.produtos-photo {
-    width: 240px;
-    height: 300px;
-    border-radius: 15%;
-    object-fit: cover;
-    display: block;
-    border: none; /* remove a borda antiga */
-}
-
-
-.produtos-card:hover .barber-photo {
-    transform: scale(1.05);
-    
-}
-
-.produto-name {
-    font-family: MinhaFonte, serif;
-    font-size: 4rem;
-    color:rgba(255, 178, 0, 1);
-    margin-bottom: 10px;
-}
