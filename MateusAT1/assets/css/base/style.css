@@ -66,7 +66,7 @@ body {
 .box a {
     color: rgb(255, 255, 255);
     font-weight: 400;
-    font-size: 20px; /* Tamanho ajustado */
+    font-size: 20px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
