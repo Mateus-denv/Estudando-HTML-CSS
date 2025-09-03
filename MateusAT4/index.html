@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Formularios</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            margin: 10px;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FORMULARIOS</h1>
+    </header>
+    
+    <form action="mailto:victorsdv@gmail.com" method="post" enctype="text/plain">
+        <hr>
+        <h4>Formulario 1</h4>
+        Nome: <input type="text" name="Nome" size="30" id="idnome">
+        <br>
+        Sobrenome: <input type="text" name="Sobrenome" id="idsobrenome">
+        <br>
+        Endereço: <input type="text" name="Endereço" id="idendereco">
+        <br>
+        Idade: <input type="number" name="Idade" id="ididade">
+        <br>
+        Data: <input type="date" name="Data" id="iddata">
+        <br>
+    </form>
+
+    <form action="mailto:victorsdv@gmail.com" method="post" enctype="text/plain">
+        <hr>
+        <h4>Fomulario 2 - Com tabelas</h4>
+        <table>
+            <tr> 
+                <td>Nome</td>
+                <td>
+                    <input type="text" name="Nome" size="30" id="idnome">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sobrenome</td>
+                <td><input type="text" name="Sobrenome" id="idsobrenome"></td>
+            </tr>
+            
+            <tr>
+                <td>Endereço</td>
+                <td>
+                    <input type="text" name="Endereço" id="idendereco">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Idade</td>
+                <td><input type="number" name="Idade" id="ididade"></td>
+            </tr>
+             <tr>
+                <td>Data</td>
+                <td><input type="date" name="Data" id="iddata"></td>
+             </tr>
+        </table>
+    </form>
+
+    <form action="mailto:victorsdv@gmail.com" method="post">
+        <hr>
+        <h4>Formulario 3 - Controle </h4>
+        <table>
+            <tr>
+                <td>Quantidade</td>
+                <td><input type="number" name="qtd" id="qtd"></td>
+            </tr>
+            <tr>
+                <td>Telefone</td>
+                <td><input type="tel" name="telefone" id="idtel"></td>
+            </tr>
+            <tr>
+                <td>Deixe seu comentario</td>
+                <td><textarea name="comentario" id="idcomentario"></textarea></td>
+            </tr>
+            <tr>
+                <td>Escolha seu time</td>
+                <td><select name="time" id="idtimes">
+                    <option value="1">V</option>
+                    <option value="2">D</option>
+                    <option value="3">F</option>
+                    <option value="4">P</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="opcoes" id="idopcoes" value="1">Internet</td>
+                <td><input type="checkbox" name="opcoes" id="idopcoes" value="2">Programação</td>
+                <td><input type="checkbox" name="opcoes" id="idopcoes" value="3">Frontend</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name ="enviar">
+                </td>
+                <td><input type="reset" name="apagar"></td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>
+

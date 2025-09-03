@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ta, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Atividade</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Jost", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        table{
+            margin: 10px;
+            gap: 10px;
+        }
+        
+        form {
+            margin: 10px;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+
+        n{
+            color: red;
+        }
+
+        footer {
+            display: flex;
+        }
+
+        .aviso{
+            color: red;
+            font-weight: 300;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Solicitação de Suporte</h2>
+    </header>
+
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Nome Completo:<n>*</n></td>
+                <td> <input type="text" name="Nome" size="30" id="idnome"></td>
+            </tr>
+            <tr>
+                <td>CPF</td>
+                <td><input type="number" name="CPF" id="idcpf"></td>
+            </tr>
+            <tr>
+                <td>Data de Nascimento:<n>*</n></td>
+                <td><input type="date" name="Data" id="iddata"></td>
+            </tr>
+            <tr>
+                <td>Data de Nascimento:<n>*</n>(Repetir)</td>
+                <td><input type="date" name="Data" id="iddata"></td>
+            </tr>
+            <tr>
+                <td>Sexo</td>
+                <td>
+                    <select name="Sexo" id="idsexo">
+                        <option value="1">Selecione</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">Feminino</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>E-mail<n>*</n></td>
+                <td><input type="email" name="email" id="idemail"></td>
+            </tr>
+            <tr>
+                <td>Tipo de Documento<n>*</n></td>
+                <td>
+                    <select name="Tipo de Documento" id="idtipodedocumento">
+                        <option value="1">CPF</option>
+                        <option value="2">RG</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <p class="aviso">*Elementos Obrigatorios</p>
+    </footer>
+</body>
+</html>

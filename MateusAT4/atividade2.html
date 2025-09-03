@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ta, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Atividade</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Jost", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        table{
+            margin: 10px;
+            gap: 10px;
+        }
+        
+        form {
+            margin: 10px;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+
+        n{
+            color: red;
+        }
+
+        footer {
+            display: flex;
+        }
+
+        .butao{
+            width: 50px;
+            height: 30px;
+        }
+
+        .aviso{
+            color: red;
+            font-weight: 300;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Login</h2>
+    </header>
+
+    <form action="./atividade.html" method="post">
+        <table>
+            <tr>
+                <td>Nome Completo:<n>*</n></td>
+                <td> <input type="text" name="Nome" size="30" id="idnome"></td>
+            </tr>
+            <tr>
+                <td>Senha<n>*</n></td>
+                <td><input type="password" name="senha" id="idsenha"></td>
+            </tr>
+        </table>
+    </form>    
+    <input type="submit" value="Entrar" class="butao">
+    <footer>
+        <p class="aviso">*Elementos Obrigatorios</p>
+    </footer>
+</body>
+</html>
