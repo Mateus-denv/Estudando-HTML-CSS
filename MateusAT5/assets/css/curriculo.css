@@ -1,0 +1,197 @@
+/* ==== RESET GLOBAL E ESTILOS DE BASE ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Fundo cinza claro padrão */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==== HEADER/NAVEGAÇÃO ==== */
+header.main-header {
+    background-color: #ffffff;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #153a75; /* Azul primário */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #153a75;
+}
+
+.nav-links i {
+    margin-right: 0.5rem;
+}
+
+/* ==== CONTAINER PRINCIPAL DO CURRÍCULO ==== */
+main {
+    padding-top: 100px; /* Espaço para o header fixo */
+    padding-bottom: 40px;
+}
+
+.curriculum-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* CABEÇALHO DO CURRÍCULO (NOME E TÍTULO) */
+.curriculum-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.curriculum-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.curriculum-header h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #153a75;
+}
+
+/* SEÇÃO DE CONTATO */
+.section-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.section-contact a {
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.section-contact a:hover {
+    color: #153a75;
+}
+
+/* ESTILO GERAL DAS SEÇÕES */
+.curriculum-section {
+    margin-bottom: 2.5rem;
+}
+
+.curriculum-section h3 {
+    font-size: 1.4rem;
+    color: #153a75;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.item {
+    margin-bottom: 1rem;
+}
+
+.item p:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.item p:last-child {
+    color: #777;
+    font-style: italic;
+}
+
+/* HABILIDADES (SKILLS) */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skills-list li {
+    background-color: #eef2ff;
+    color: #153a75;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* RODAPÉ DO CURRÍCULO */
+.curriculum-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .curriculum-container {
+        padding: 1.5rem;
+    }
+    .curriculum-header h1 {
+        font-size: 1.8rem;
+    }
+    .curriculum-header h2 {
+        font-size: 1.1rem;
+    }
+    .section-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
