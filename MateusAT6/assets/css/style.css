@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+@font-face {
+  font-family: 'Porsche Font';
+  src: url('../fonts/911porschav3.ttf') format('truetype');
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* --- Estilos do Header --- */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 50px; 
+    background-color: #000000;
+    border-bottom: 1px solid #ffffff; 
+}
+
+.logo {
+    font-family: 'Porsche Font';
+    font-size: 40px; 
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px; 
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d3d3d3; 
+}
+
+
+/* --- Estilos da Seção Principal (Hero) --- */
+.hero-section {
+    position: relative; /* Contexto para o texto absoluto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh; /* Ocupa 90% da altura da tela */
+    overflow: hidden; /* Esconde qualquer parte da imagem que transborde */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o container sem distorcer a imagem */
+    filter: brightness(0.6); /* Escurece a imagem para o texto ficar mais legível */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-title {
+    position: relative; /* z-index só funciona com position */
+    z-index: 1;
+    font-family: 'Porsche Font';
+    font-size: clamp(3rem, 8vw, 6rem); /* Fonte responsiva: min, ideal, max */
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
+}
+
+/* --- Estilos Adicionais para o Slideshow --- */
+
+.hero-section {
+    overflow: hidden; /* ESSENCIAL: Esconde as imagens que estão fora da área visível */
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Fica atrás do título e dos botões */
+}
+
+.slideshow-track {
+    display: flex; /* Coloca as imagens em linha */
+    width: 400%; /* 100% para cada uma das 4 imagens */
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* Animação de transição */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+/* Estilo dos botões */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+    left: 20px; 
+}
+
+.next-btn {
+    right: 20px; 
+}
+
+/* --- Estilos do Footer --- */
+.footer-container {
+    background-color: #0000009d;
+    color: #ffffff;
+    border-top: 1px solid rgb(150, 150, 150);
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.footer-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.footer-container a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-container a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+/* --- Estilos para Páginas de Conteúdo (Saiba Mais, Cadastro) --- */
+.content-page-container {
+    max-width: 800px; 
+    margin: 60px auto; 
+    padding: 20px 40px;
+    background-color: #111;
+    border-radius: 8px;
+}
+
+.content-page-container h1 {
+    font-family: 'Porsche Font';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.content-page-container h2 {
+    font-family: 'Porsche Font';
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content-page-container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+/* Lista de Benefícios */
+.benefits-list {
+    list-style: none; /* Remove os marcadores padrão */
+    padding-left: 0;
+}
+
+.benefits-list li {
+    padding: 10px 0 10px 25px;
+    position: relative;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.benefits-list li::before {
+    content: '✓'; 
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Link de "Voltar" */
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #aaa;
+}
+
+
+/* --- Estilos do Formulário de Cadastro --- */
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os campos do formulário */
+    margin-top: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: var(--cor-texto);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--cor-texto);
+}
+
+.submit-btn {
+    padding: 15px;
+    background-color: var(--cor-texto);
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #d3d3d3;
+}
