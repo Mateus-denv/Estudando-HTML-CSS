@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo 01 - DOM</h1>
+
+    <div id="div01">
+        <p id="p01">Ex 01</p>
+        <p class="p02">Texto exemplo</p>
+    </div>
+
+    <div id="div02">
+        <p>Test div 2</p>
+
+    </div>
+    
+    <script>
+        var titulo = window.document.getElementsByTagName('h1');
+        document.writeln("Texto do h1 = " + titulo[0].innerText);
+
+        titulo[0].style.color = "blue";
+        
+        var p = document.getElementById('p01');
+        p01.style.color = "white";
+        p01.style.background = "blue";
+
+        var p = document.getElementsByClassName('p02');
+        p[0].style.background = "red";
+        p[0].style.color = "yellow";
+
+        var div02 =  document.getElementById('div02');
+        div02.style.color = "red";
+
+        //QuerySelecor
+
+        
+
+
+
+        </script>
+</body>
+</html>
