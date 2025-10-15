@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .urna {
+        background: #fff;
+        border: 2px solid #444;
+        border-radius: 10px;
+        padding: 20px;
+        width: 340px;
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .display {
+        background: #222;
+        color: #0f0;
+        font-size: 18px;
+        height: 120px;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        white-space: pre-line;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .foto {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .foto img {
+        width: 120px;
+        height: 120px;
+        border-radius: 8px;
+        border: 2px solid #444;
+        object-fit: cover;
+    }
+
+    .botoes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .botoes button {
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #ddd;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .botoes button:hover {
+        background: #ccc;
+    }
+
+    .acoes {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .acoes button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .limpar { background: #f39c12; }
+    .branco { background: #95a5a6; }
+    .confirmar { background: #27ae60; }
+    </style>
+</head>
+<body>
+    <div class="urna">
+        <div class="display" id="display">
+            Digite o numero do candidato
+        </div>
+        <div class="foto" id="foto"></div>
+        <div class="botoes">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+        </div>
+        <div class="acoes">
+            <button class="limpar">Corrigir</button>
+            <button class="branco">Voto Branco</button>
+            <button class="confirmar">Confirmar</button>
+        </div>
+        <script>
+
+            const display = document.getElementById("display");
+            const botoes = document.querySelectorAll(".botoes button");
+            const foto = document.getElementById("foto")
+            const limpar = document.querySelector(".limpar");
+            const confirmar = document.querySelector(".confirmar");
+            const branco = document.querySelector(".branco");
+            let numero_digitado = ""
+
+        const candidatos = {
+            "13": {Nome: "Luiz Inácio", Partido: "PT - Partido dos Trabalhadores", Foto: "../MateusAT9/lula.jpg"},
+
+            "22": {Nome: "Jair Bolsonaro", Partido: "PL - Partido Liberal", Foto: "../MateusAT9/bolsonaro.jpg"},
+
+            "12": {Nome: "Ciro Gomes", Partido: "PDT - Partido Democrático Trabalhista", Foto: "../MateusAT9/cirogomes.jpg"},
+
+            "15": {Nome: "Simone Tebet", Partido: "MDB - Movimento Democrático Brasileiro", Foto: "../MateusAT9/simonetelbty.jpg"},
+
+            "44": {Nome: "Soraya Thronicke", Partido: "PSL - Partido Social Liberal", Foto: "../MateusAT9/sorayathronicke.jpg"}
+        };
+
+
+        botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
+                if (numero_digitado.length < 2) {
+                    numero_digitado += botao.innerText;
+                    display.innerText = "Número: " + numero_digitado;
+                    foto.innerHTML = "";
+
+                    if (numero_digitado.length === 2) {
+
+                        if (candidatos[numero_digitado]) {
+                            const c = candidatos[numero_digitado];
+                            display.innerText = `Número: ${numero_digitado}\nCandidato: ${c.Nome}\nPartido: ${c.Partido}`;
+                            foto.innerHTML = `<img src="${c.Foto}" alt="Foto de ${c.Nome}">`;
+                        } 
+
+                        else {
+                            display.innerText = `Número: ${numero_digitado}\nCandidato inexistente`;
+                        }
+                    }
+                }
+            });
+        });
+        
+        limpar.addEventListener("click", () => {
+            numero_digitado = "";
+            display.innerText = "Digite o número do candidato";
+            foto.innerHTML = "";
+        });
+        branco.addEventListener("click", () => {
+            numero_digitado = "BRANCO";
+            display.innerText = "VOTO EM BRANCO";
+            foto.innerHTML = "";
+        });
+        confirmar.addEventListener("click", () => {
+            if (numero_digitado === "") {
+            display.innerText = "Nenhum voto registrado!";
+            } else if (numero_digitado === "BRANCO") {
+                display.innerText = "✅ Voto em BRANCO registrado!";
+            } else if (candidatos[numero_digitado]) {
+                display.innerText = `✅ Voto registrado para ${candidatos[numero_digitado].Nome}`;
+            } else {
+                display.innerText = "⚠️ Número inexistente. Voto nulo.";
+            }
+
+            foto.innerHTML = "";
+
+            setTimeout(() => {
+                numero_digitado = "";
+                display.innerText = "Digite o número do candidato";
+                foto.innerHTML = "";
+            }, 2500);// Limpa depois de 2 segundos
+        });
+
+        </script>
+    </div>
+</body>
+</html>
